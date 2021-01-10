@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Description goes here">
+    <meta name="keywords" content="Discord Bot, Mai, Mai Sakurajima, Aobuta, Anime">
+    <meta name="author" content="Sakurajimai#6742">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/emojis/757869043117064223.png?v=1" />
+
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/market.css">
+
+    <title> Mai Marketplace | Discord Bot </title>
+  </head>
+  <body>
+    <div class="main">
+      <section class='header'>
+        <nav class="header-nav-bar">
+          <img src="../src/images/avatar.png" alt="">
+          <h1>Mai Market</h1>
+          <ul>
+            <li class='header-btn'><a href="../index.html"> Home </a></li>
+            <li class='header-btn'><a href="./commands.html"> Commands </a></li>
+            <li class='header-btn'><a href="#"> Market </a></li>
+            <li class='header-btn'><a href="https://invite.mai-san.ml/" target="_blank"> Invite </a></li>
+          </ul>
+        </nav>
+      </section>
+      <div class="divider"> </div>
+      <section>
+        <nav class="nav-bar">
+          <ul>
+            <li data-li='all' class='nav-btn active'> ALL </li>
+            <li data-li='bg' class='nav-btn'> BACKGROUND </li>
+            <li data-li='wr' class='nav-btn'> WREATH </li>
+            <li data-li='pt' class='nav-btn'> PATTERN </li>
+            <li data-li='em' class='nav-btn'> EMBLEM </li>
+            <li data-li='ht' class='nav-btn'> HAT </li>
+          </ul>
+        </nav>
+        <div class="items" id="item-list">
+        </div>
+        </div>
+      </section>
+      <div class="footer">
+        <div class="footer-information">
+          <h1>Mai</h1>
+          <p>
+            © Copyright Mai 2020-2021. All rights reserved <br>
+            This site is made by Sakurajimai#6742
+          </p>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Back to Top</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./commands.html">Commands</a></li>
+            <li><a href="https://invite.mai-san.ml" target="_blank">Invite</a></li>
+            <li><a href="#" target="_blank">Guides</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="https://invite.mai-san.ml" target="_blank">
+        <div class="invite-link">
+        <img src="https://cdn.discordapp.com/emojis/757869043117064223.png?v=1" alt="Add Mai to your server">
+        <div class="overlay">
+          <div class="invite-text">
+            Invite!
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="options">
+      <div class="gear-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+          <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+        </svg>
+      </div>
+      <div class="market-menu">
+        <ul>
+          <li class="market-options" sort="id">Sort by ID</li>
+          <li class="market-options" sort="id-dec">Sort by ID Descending</li>
+          <li class="market-options" sort="price">Sort by Price</li>
+          <li class="market-options" sort="price-dec">Sort by Price Descending</li>
+          <li class="market-options" sort="name">Sort by Name</li>
+          <li class="market-options" sort="name-dec">Sort by Name Descending</li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
+
+      <script src="../src/javascript/jquery/jquery-3.5.1.js"></script>
+      <script src="../src/javascript/main.js"></script>
+      <script src="../src/javascript/navigators.js"></script>
+
+  </body>
+</html>
