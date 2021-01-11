@@ -33,13 +33,6 @@ body {
 	animation: float 6s ease-in-out infinite;
 }
 
-@media (max-width: 600px){
-  .main-content-image {
-    width: 60vw;
-    height: auto;
-  }
-}
-
 @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -204,4 +197,21 @@ body {
 
 .link-button:hover{
   background-color: deeppink;
+}
+
+@media (max-width: 810px){
+  .main-content-image {
+    height: auto;
+    margin: auto;
+  }
+  .main-content-children h1{
+    text-align: center;
+  }
+  .main-content-children p{
+    text-align: center;
+  }
+  .main-content-buttons li a{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
