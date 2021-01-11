@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 
 body {
   background-image: url('../images/background.jpeg');
@@ -10,39 +10,34 @@ body {
   background-blend-mode: overlay;
 }
 
-h1 {
-  font-family: 'Potta One';
-}
+.content {
 
-p {
-  font-family: 'Poppins';
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  color: hotpink;
 }
 
 .main-content {
   display: flex;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  justify-content: center;
+  padding-bottom: 6rem;
 }
 
-.main-content-left {
-  margin: 50px;
-  padding: 20px;
-  width: 50%;
-}
-
-.main-content-left img{
+.main-content-image img{
   max-width: 400px;
-  float: right;
+  width: 100%;
+  height: auto;
+  display: block;
   margin: auto;
-	transform: translatey(0px);
+  margin-right: 0px;
+  transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
+}
+
+@media (max-width: 600px){
+  .main-content-image {
+    width: 60vw;
+    height: auto;
+  }
 }
 
 @keyframes float {
@@ -57,30 +52,35 @@ a:hover {
 	}
 }
 
-.main-content-right {
-  margin: auto;
-  margin-left: 0;
-  padding: 20px;
+.main-content-children {
+  padding: 1rem;
   width: 50%;
+  margin: auto;
+  min-width: 400px;
+  text-align: left;
+  font-family: 'Poppins';
+  vertical-align: center;
 }
 
-.main-content-right h1{
-  font-size: 100px;
-  margin-bottom: 0px;
+.main-content-children h1{
+  text-align: left;
+  font-family: 'Potta One';
+  font-size: 60px;
+  margin: 0;
 }
 
-.main-content-right p{
-  font-size: 20px;
+.main-content-children p{
+  text-align: left;
   margin-top: 0px;
-  margin-bottom: 0px;
 }
 
-.main-content-buttons ul {
+.main-content-buttons {
   display: flex;
-  padding: 0;
+  padding: 1rem 0rem;
 }
 
-.main-content-buttons ul li {
+.main-content-buttons li a{
+  display: block;
   margin: 10px;
   margin-right: 20px;
   margin-left: 0px;
@@ -89,89 +89,70 @@ a:hover {
   text-align: center;
   background-color: #272928;
   border-radius: 5px;
-  font-family: 'Poppins'
 }
 
-.main-content-buttons ul li:hover{
-  cursor: pointer;
+.main-content-buttons li a:hover{
+  color: white;
   background-color: hotpink;
 }
 
-.main-content-buttons ul li a:hover{
-  color: white;
-}
-
 .main-features {
+  margin: 0;
   display: block;
 }
 
-.main-features-top {
-  width: auto;
+.wave-border {
+  width: 100%;
   height: 100px;
   background-image: url('../images/wave.png');
   background-size: cover;
 }
 
-.main-features-bottom {
-  display: block;
+.feature-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: dimgray;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  margin-bottom: 150px;
 }
 
-.main-features-bottom h1{
-  font-size: 40px;
-}
-
-.main-features-bottom p{
-  font-size: 20px;
-}
-
-.main-features-bottom img{
-  transition: transform .5s ease;
+.feature-column{
+  flex-grow: 1;
+  padding: 1rem;
+  width: 50%;
+  margin: 10px;
   max-width: 400px;
+  vertical-align: center;
 }
 
-.main-features-bottom img:hover{
+.feature-column h1{
+  font-family: 'Potta One'
+}
+
+.feature-column p{
+  text-align: justify;
+}
+
+.feature-column-image img{
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  transition: transform .5s ease;
+}
+
+.feature-column-image img:hover{
   cursor: pointer;
   transform: scale(1.05);
 }
 
-.main-features-bottom-col {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 150px;
-  margin-right: 150px;
-  white-space: normal;
-}
-
-.main-features-bottom-col p{
-  word-wrap: break-word;
-  text-align: justify;
-}
-
-.main-features-bottom-col-left {
-  margin-right: 0;
-  padding: 20px;
-  width: 50%;
-  min-width: 400px;
-}
-
-.main-features-bottom-col-right {
-  margin-left: 0px;
-  padding: 20px;
-  width: 50%;
-  min-width: 400px;
-}
 
 .main-links {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   justify-content: center;
-  margin-left: 40px;
-  margin-right: 40px;
+  padding-top: 6rem;
 }
 
 .link-container {
@@ -184,6 +165,13 @@ a:hover {
   transition: transform 0.5s ease;
 }
 
+.link-empty-child {
+  width: 500px;
+  margin: 0px 20px;
+  padding: 0px 20px;
+  height: 0px;
+}
+
 .link-container:hover{
   cursor: pointer;
   transform: scale(1.05);
@@ -192,19 +180,22 @@ a:hover {
 .link-container h1{
   font-family: 'Poppins';
   margin-top: 0;
+  font-size: 20px;
 }
 
 .link-container p{
   color: darkgrey;
+  font-size: 13px;
 }
 
 .link-button {
-  margin: 10px;
-  padding: 10px;
+  margin: auto;
+  padding: 8px;
   background-color: hotpink;
   border-radius: 10px;
   font-family: 'Poppins';
   text-align: center;
+  font-size: 12px
 }
 
 .link-container a:hover{

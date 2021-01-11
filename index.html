@@ -5,81 +5,94 @@
     <meta name="description" content="Description goes here">
     <meta name="keywords" content="Discord Bot, Mai, Mai Sakurajima, Aobuta, Anime">
     <meta name="author" content="Sakurajimai#6742">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/png" href="https://cdn.discordapp.com/emojis/757869043117064223.png?v=1" />
 
-    <link rel="stylesheet" href="./src/css/main.css">
-    <link rel="stylesheet" href="./src/css/styles.css">
-    <link rel="stylesheet" href="./src/css/home.css">
+    <!--Stylesheets-->
 
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <!--------------->
     <title> Mai | Discord Bot </title>
+
+    <script src="./src/javascript/jquery/jquery-3.5.1.js"></script>
+    <script src="./src/javascript/main.js"></script>
+
   </head>
   <body>
-    <div class="main">
-      <section class='header'>
-        <nav class='header-nav-bar'>
-          <img src="./src/images/avatar.png" alt="">
-          <h1>Mai</h1>
-          <ul>
-            <li class='header-btn'><a href="#"> Home </a></li>
-            <li class='header-btn'><a href="./pages/commands.html"> Commands </a></li>
-            <li class='header-btn'><a href="https://market.mai-san.ml/"> Market </a></li>
-            <li class='header-btn'><a href="https://invite.mai-san.ml/" target="_blank"> Invite </a></li>
-          </ul>
-        </nav>
-      </section>
-      <div class="divider"> </div>
-      <div class="content">
-        <div class="fade-in">
-          <div class="main-content">
-            <div class="main-content-left">
-              <img src="./src/images/avatar.png" alt="avatar">
+    <nav class="nav-bar">
+      <div class="nav-bar-img">
+        <img src="./src/images/avatar.png" alt="">
+        <h1>Mai</h1>
+      </div>
+      <div class="nav-bar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-bar-links">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="https://commands.mai-san.ml">COMMANDS</a></li>
+          <li><a href="https://market.mai-san.ml">MARKET</a></li>
+          <li><a href="https://invite.mai-san.ml">INVITE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="fade-in">
+        <div class="main-content">
+          <div class="main-content-children">
+            <div class="main-content-image">
+              <img src="./src/images/avatar.png" alt="">
             </div>
-            <div class="main-content-right">
-              <h1> Mai </h1>
-              <p> A multifunctional discord bot.</p>
-              <div class="main-content-buttons">
-                <ul>
-                  <li> <a href="https://support.mai-san.ml" target="_blank"> Support </a> </li>
-                  <li> <a href="https://invite.mai-san.ml" target="_blank"> Invite </a> </li>
-                  <li> <a href="#"> Guide </a> </li>
-                </ul>
-              </div>
+          </div>
+          <div class="main-content-children">
+            <h1>Mai</h1>
+            <p>A multifunctional discord bot</p>
+            <div class="main-content-buttons">
+              <li> <a href="https://support.mai-san.ml" target="_blank"> Support </a> </li>
+              <li> <a href="https://invite.mai-san.ml" target="_blank"> Invite </a> </li>
+              <li> <a href="https://guides.mai-san.ml"> Guide </a> </li>
             </div>
+          </div>
         </div>
         <div class="main-features">
-          <div class="main-features-top"> </div>
-          <div class="main-features-bottom">
-            <div class="main-features-bottom-col">
-              <div class="main-features-bottom-col-left">
+          <div class="wave-border"> </div>
+          <div class="feature-row">
+            <div class="feature-column">
+              <div class="feature-column-image">
                 <img src="./src/images/profile-sample.png" alt="">
               </div>
-              <div class="main-features-bottom-col-right">
-                <h1>Show off your profile!</h1>
-                <p>Earn XP and credits and buy custom background, wallpapers, and more! Everything in this card is customizable</p>
-                <p>Visit <a href="./pages/market.html">Market</a> for more details!</p>
-              </div>
             </div>
-            <div class="main-features-bottom-col">
-              <div class="main-features-bottom-col-left">
-                <h1>Track Airing Anime!</h1>
-                <p>Be notified of the current anime releases - right directly on your server! There's no limit on what you can add!</p>
-                <p>Visit <a href="#">Guides/Anischedule</a> for more details!</p>
-              </div>
-              <div class="main-features-bottom-col-right">
+            <div class="feature-column">
+              <h1>Show off your profile!</h1>
+              <p>Earn XP and credits and buy custom background, wallpapers, and more! Everything in this card is customizable</p>
+              <p>Visit <a href="./pages/market.html">Market</a> for more details!</p>
+            </div>
+          </div><div class="feature-row">
+            <div class="feature-column">
+              <h1>Track Airing Anime!</h1>
+              <p>Be notified of the current anime releases - right directly on your server! There's no limit on what you can add!</p>
+              <p>Visit <a href="#">Guides/Anischedule</a> for more details!</p>
+            </div>
+            <div class="feature-column">
+              <div class="feature-column-image">
                 <img src="./src/images/anischedule-sample.png" alt="">
               </div>
             </div>
-            <div class="main-features-bottom-col">
-              <div class="main-features-bottom-col-left">
+          </div><div class="feature-row">
+            <div class="feature-column">
+              <div class="feature-column-image">
                 <img src="./src/images/chatbot-sample.png" alt="">
               </div>
-              <div class="main-features-bottom-col-right">
-                <h1>Chat with Mai!</h1>
-                <p>Using a high-end chatbot api, you may chat with mai with almost human-precision response!</p>
-                <p>Begin by pinging her in your server!</p>
-              </div>
+            </div>
+            <div class="feature-column">
+              <h1>Chat with Mai!</h1>
+              <p>Using a high-end chatbot api, you may chat with mai with almost human-precision response!</p>
+              <p>Begin by pinging her in your server!</p>
             </div>
           </div>
         </div>
@@ -95,7 +108,7 @@
           </div>
           <div class="link-container">
             <h1>Vote Mai</h1>
-            <p>Mai is listed on top.gg and dbl! Show your support and vote Mai!</p>
+            <p>Mai is listed on top.gg and dbl! Show your support and vote Mai! Leave a review while you're at it so that we know what to improve/develop!</p>
             <a href="https://top.gg/bot/702074452317307061/vote" target="_blank">
               <div class="link-button">
                 Do it!
@@ -111,6 +124,7 @@
               </div>
             </a>
           </div>
+          <div class="link-empty-child"> </div>
         </div>
         <div class="footer">
           <div class="footer-information">
@@ -123,26 +137,24 @@
           <div class="footer-links">
             <ul>
               <li><a href="#">Back to Top</a></li>
-              <li><a href="./pages/commands.html">Commands</a></li>
+              <li><a href="https://commands.mai-san.ml/">Commands</a></li>
               <li><a href="https://market.mai-san.ml/">Market</a></li>
-              <li><a href="https://invite.mai-san.ml" target="_blank">Invite</a></li>
-              <li><a href="#" target="_blank">Guides</a></li>
+              <li><a href="https://invite.mai-san.ml/" target="_blank">Invite</a></li>
+              <li><a href="https://guides.mai-san.ml/" target="_blank">Guides</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <a class="main-button-link" href="https://invite.mai-san.ml" target="_blank">
-        <div class="invite-link">
-        <img src="https://cdn.discordapp.com/emojis/757869043117064223.png?v=1" alt="Add Mai to your server">
-        <div class="overlay">
-          <div class="invite-text">
-            Invite!
-          </div>
+    </div>
+    <a class="main-button-link" href="https://invite.mai-san.ml" target="_blank">
+      <div class="invite-link">
+      <img src="https://cdn.discordapp.com/emojis/757869043117064223.png?v=1" alt="Add Mai to your server">
+      <div class="overlay">
+        <div class="invite-text">
+          Invite!
         </div>
       </div>
-    </a>
-    <script src="./src/javascript/jquery/jquery-3.5.1.js"></script>
-    <script src="./src/javascript/navigators.js"></script>
     </div>
+  </a>
   </body>
 </html>
