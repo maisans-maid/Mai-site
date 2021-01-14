@@ -1,0 +1,54 @@
+body {
+  background-image: url('../images/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+.body-404{
+  display: block;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.body-404-container{
+  margin: auto;
+  display: block;
+}
+
+@keyframes fadeOut {
+  0% {opacity:1;}
+  100% {opacity:0;}
+}
+
+.body-404-container img{
+  display: block;
+  margin: auto;
+  padding: 10px;
+  max-width: 200px;
+  animation: fadeOut ease 6s forwards;
+  animation-delay: 3s;
+}
+
+.body-404-information {
+  margin: auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.body-404-information h1{
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+.body-404-information h2{
+  margin-top: 0;
+}
+
+.quoted-text {
+  color: darkgray;
+  font-size: 12px;
+  font-style: italic;
+}
