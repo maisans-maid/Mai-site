@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Description goes here">
+    <meta name="keywords" content="Discord Bot, Mai, Mai Sakurajima, Aobuta, Anime">
+    <meta name="author" content="Sakurajimai#6742">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/emojis/757869043117064223.png?v=1" />
+
+    <!--Stylesheets-->
+
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/embed-visualizer.css">
+
+    <script src="./src/javascript/jquery/jquery-3.5.1.js"></script>
+    <script src="./src/javascript/embed-visualizer.js"></script>
+
+    <!--------------->
+    <title> Mai | Discord Bot </title>
+  </head>
+  <body>
+    <div class="embed-visualizer-content">
+      <div class="content-container">
+        <div class="content-ui">
+          <div class="live-editor">
+            <input maxlength="256" class="embed-title-editor" type="text" name="editor" required="true" formnovalidate value="Mai's Embed visualizer ~~Some markdown can be~~ *used here* too">
+            <label for="edit" class="edit-label">
+              <span class="content-edit"> Title </span>
+            </label>
+          </div>
+          <div class="live-editor">
+            <input class="embed-url-editor" type="text" name="editor" required="true" formnovalidate value="https://mai-san.ml/">
+            <label for="edit" class="edit-label">
+              <span class="content-edit"> URL </span>
+            </label>
+          </div>
+          <div class="description-live-editor"> Description <span class="desc-char-remaining"></span></div>
+          <div class="description-dialogue-box">
+            <div class="embed-description-editor" contenteditable="true"> Welcome to Mai's embed visualizer. This also supports **Basic markdown** such as **bold**, *italics*, ~~strikethrough~~, __underline__, or __~~***combination***~~__ of them. ```codeblocks can be used aswell``` including `inline-code`. </div>
+          </div>
+          <div class="author-live-editor"> Author </div>
+          <div class="author-dialogue-box clickable-editor">
+            <div class="live-editor">
+              <input maxlength="256" class="embed-author-name-editor" type="text" name="editor" required="true" formnovalidate value="Author">
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Author Name </span>
+              </label>
+            </div>
+            <div class="live-editor">
+              <input class="embed-author-image-editor" type="text" name="editor" required="true" formnovalidate value="https://i.redd.it/lhud8ssm86h51.png">
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Author Image </span>
+              </label>
+            </div>
+            <div class="live-editor">
+              <input class="embed-author-url-editor" type="text" name="editor" required="true" formnovalidate>
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Author URL </span>
+              </label>
+            </div>
+          </div>
+          <div class="fields-live-editor"> Fields <span class="add">+</span><span class="remove">-</span></div>
+          <div class="fields-dialogue-box clickable-editor">
+            <div class="live-editor">
+              <input maxlength="256" class="embed-field-name-editor" type="text" name="editor" required="true" formnovalidate>
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Field Name </span>
+              </label>
+            </div>
+            <div class="live-editor">
+              <input maxlength="1024" class="embed-field-value-editor" type="text" name="editor" required="true" formnovalidate>
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Field Description </span>
+              </label>
+            </div>
+            <div class="inline-on-or-off">
+              <span>Inline</span>
+              <div class="switch">
+                <input type="checkbox" class="embed-inline-toggle">
+                <span class="slider"></span>
+              </div>
+            </div>
+            <div class="confirm-button"> ADD </div>
+            <div class="cancel-button"> CANCEL </div>
+          </div>
+          <div class="images-live-editor"> Images </div>
+          <div class="images-dialogue-box clickable-editor">
+            <div class="live-editor">
+              <input class="embed-thumbnail-editor" type="text" name="editor" required="true" formnovalidate value="https://cdn.myanimelist.net/images/characters/14/398262.jpg">
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Thumbnail URL </span>
+              </label>
+            </div>
+            <div class="live-editor">
+              <input class="embed-image-editor" type="text" name="editor" required="true" formnovalidate value="https://i.pinimg.com/originals/cd/0f/80/cd0f80478f550d908c213c31d3e68ea3.jpg">
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Image URL </span>
+              </label>
+            </div>
+          </div>
+          <div class="footer-live-editor"> Footer </div>
+          <div class="footer-dialogue-box clickable-editor">
+            <div class="live-editor">
+              <input class="embed-footer-image-editor" type="text" name="editor" required="true" formnovalidate value="https://i.redd.it/lhud8ssm86h51.png">
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Footer Image URL </span>
+              </label>
+            </div>
+            <div class="live-editor">
+              <input class="embed-footer-text-editor" type="text" name="editor" required="true" formnovalidate value="This is a footer">
+              <label for="edit" class="edit-label">
+                <span class="content-edit"> Footer Text </span>
+              </label>
+            </div>
+            <div class="inline-on-or-off">
+              <span>Add Timestamp</span>
+              <div class="switch">
+                <input type="checkbox" class="embed-footer-timestamp-toggle">
+                <span class="slider"></span>
+              </div>
+            </div>
+          </div>
+          <div class="color-selector">
+            <span>Embed Color</span>
+            <div class="color-container">
+              <div class="color-btn-container">
+                <input type="color" name="color" class="color-picker">
+                <span class="color-name">#000000</span>
+                <span class="color-btn"></span>
+              </div>
+            </div>
+          </div>
+          <div class="visualizer-options">
+            <div class="visualizer-text">Copy to Clipboard</div>
+            <ul>
+              <li class="clipboard-json"> JSON Format </li>
+              <li class="clipboard-greeter"> Greeter Format </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content-preview">
+          <div class="content-message-container">
+            <section class="message-title">
+              <div class="hashtag-title">
+                <div class="icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" class="hashtag-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z">
+                    </path>
+                  </svg>
+                </div>
+                <h3>mai-embed-visualizer</h3>
+              </div>
+              <div class="toolbar">
+                <div class="toolbar-icons">
+                  <svg x="0" y="0" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                    <path fill="currentColor" fill-rule="evenodd" d="M18 9V14C18 15.657 19.344 17 21 17V18H3V17C4.656 17 6 15.657 6 14V9C6 5.686 8.686 3 12 3C15.314 3 18 5.686 18 9ZM11.9999 21C10.5239 21 9.24793 20.19 8.55493 19H15.4449C14.7519 20.19 13.4759 21 11.9999 21Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="toolbar-icons">
+                  <svg x="0" y="0" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                    <path fill="currentColor" fill-rule="evenodd" d="M22 12L12.101 2.10101L10.686 3.51401L12.101 4.92901L7.15096 9.87801V9.88001L5.73596 8.46501L4.32196 9.88001L8.56496 14.122L2.90796 19.778L4.32196 21.192L9.97896 15.536L14.222 19.778L15.636 18.364L14.222 16.95L19.171 12H19.172L20.586 13.414L22 12Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="toolbar-icons">
+                  <svg x="0" y="0" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                    <path fill="currentColor" fill-rule="evenodd" d="M14 8.00598C14 10.211 12.206 12.006 10 12.006C7.795 12.006 6 10.211 6 8.00598C6 5.80098 7.794 4.00598 10 4.00598C12.206 4.00598 14 5.80098 14 8.00598ZM2 19.006C2 15.473 5.29 13.006 10 13.006C14.711 13.006 18 15.473 18 19.006V20.006H2V19.006Z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+            </section>
+            <div class="message-interface">
+              <div class="message">
+                <div class="message-author">
+                  <img src="./src/images/avatar.png">
+                  <h4> Mai </h4>
+                  <div class="bot-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 15.2">
+                      <path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z" fill="currentColor"></path>
+                    </svg>
+                    BOT
+                  </div>
+                  <div class="timestamp">
+                    Today
+                  </div>
+                </div>
+                <div class="message-embed">
+                  <div class="embed-top">
+                    <div class="embed-contents">
+                      <div class="embed-author">
+                        <img class="embed-author-image" src="https://i.redd.it/lhud8ssm86h51.png" alt="">
+                        <a href="" class="embed-author-anchor"><span> Author </span> </a>
+                      </div>
+                      <div class="embed-title"><a href="https://mai-san.ml/"> Mai's Embed visualizer <strike>Some markdown can be</strike> <i>used here</i> too </a> </div>
+                      <div class="embed-description">Welcome to Mai's embed visualizer. This also supports <b>Basic markdown</b> such as <b>bold</b>, <i>italics</i>, <strike>strikethrough</strike>, <u>underline</u>, or <u><strike><b><i>combination</b></i></strike></u> of them. <div class="codeblock">codeblocks can be used aswell</div> including <code>inline-code</code>.</div>
+                      <div class="embed-fields">
+                        <div class="embed-field inline">
+                          <h5>Field</h5>
+                          <p>An inline field</p>
+                        </div>
+                        <div class="embed-field inline">
+                          <h5>Field 2</h5>
+                          <p>An inline field too</p>
+                        </div>
+                        <div class="embed-field inline">
+                          <h5><u>Field.</u></h5>
+                          <p><code>inline-code</code></p>
+                        </div>
+                        <div class="embed-field inline">
+                          <h5>Field</h5>
+                          <p>Still an inline field</p>
+                        </div>
+                        <div class="embed-field inline">
+                          <h5>Field</h5>
+                          <p>Still an inline field</p>
+                        </div>
+                        <div class="embed-field">
+                          <h5>Field</h5>
+                          <p>Not an inline field</p>
+                        </div>
+                        <div class="embed-field">
+                          <h5>Field</h5>
+                          <p>Not an inline field aswell</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="embed-thumbnail">
+                      <img src="https://cdn.myanimelist.net/images/characters/14/398262.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="embed-bottom">
+                    <div class="embed-image">
+                      <img src="https://i.pinimg.com/originals/cd/0f/80/cd0f80478f550d908c213c31d3e68ea3.jpg" alt="">
+                    </div>
+                    <div class="embed-footer">
+                      <div class="footer-image">
+                        <img src="https://i.redd.it/lhud8ssm86h51.png" alt="">
+                      </div>
+                      <div class="footer-text">
+                        <p> This is a footer </p>
+                        <div class="embed-footer-timestamp" ts="inactive">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="error-message">
+      <div class="error-title">
+        Sample
+      </div>
+      <div class="error-description">
+        Because
+      </div>
+      <div class="error-acknowledge">
+        Got It!
+      </div>
+    </div>
+    <div class="copied-information">
+      <div class="copied-container">
+        <h1>Copied to Clipboard!</h1>
+      </div>
+    </div>
+  </body>
+</html>
