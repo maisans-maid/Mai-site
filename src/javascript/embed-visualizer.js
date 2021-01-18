@@ -44,6 +44,10 @@ function toMD(text, options = {}){
     text = text.replace(/<code>(.*?)<\/code>/ig, '`$1`');
   };
 
+  if (options.emoji === true){
+    text = text.replace(/<img class="embed-description-emojis" name="(\w{1,})" animated="(\w{0,})" src="https:\/\/cdn.discordapp.com\/emojis\/(\d{1,})" width="\d{1,}px" height="\d{1,}px">/g, '<$2:$1:$3>');
+  };
+
   //Remove any br codes
   text = text.replace(/<br>/gi,'\n');
 
@@ -51,7 +55,7 @@ function toMD(text, options = {}){
   text = text.replace(/<div>(.*?)<\/div>/gi,'$1\n');
 
   //replace anything with nothing
-  text = text.replace(/<[^>]*>/gi,'');
+  text = text.replace(/<[^:>]*>/gi,'');
 
   return text;
 };
@@ -86,6 +90,12 @@ function toHTML(text, options = {}){
     text = text.replace(/\`(.*?)\`/ig, '<code>$1</code>');
   };
 
+  if (options.emoji === true){
+    console.log(text)
+    text = text.replace(/(<|&lt;)?(a)?:?(\w{2,32}):(\d{17,19})(>|&gt;)?/g,'<img class="embed-description-emojis" name="$3" animated="$2" src="https://cdn.discordapp.com/emojis/$4" width="15px" height="15px"></img>');
+    console.log(text)
+  };
+
   return text;
 };
 
@@ -100,7 +110,9 @@ function getEmbedObject(){
     inlineCode: false
   })?.trim() || null;
 
-  embed.description = toMD($('.embed-description').html().trim()) || "";
+  embed.description = toMD($('.embed-description').html().trim(), {
+    emoji: true
+  }) || "";
 
   embed.url = $('.embed-title a').attr('href') || null;
 
@@ -129,9 +141,12 @@ function getEmbedObject(){
       name: toMD($(this).find('h5').html().trim(), {
         hyperlinks: false,
         codeblock: false,
-        inlineCode: false
+        inlineCode: false,
+        emoji: true
       }),
-      value: toMD($(this).find('p').html().trim()),
+      value: toMD($(this).find('p').html().trim(), {
+        emoji: true
+      }),
       inline: $(this).hasClass('inline')
     });
   });
@@ -307,7 +322,9 @@ $(document).ready(function(){
   });
 
   $('.embed-description-editor').on('keyup', function(){
-    var value = toHTML($(this).html());
+    var value = toHTML($(this).html(), {
+      emoji: true
+    });
 
     if ($(this).text().length > 2046){
       $('.desc-char-remaining').css('color', 'indianred');
@@ -361,14 +378,19 @@ $(document).ready(function(){
     var value = toHTML($(this).val(), {
       stripLinks: true,
       code: false,
-      inlineCode: false
+      inlineCode: false,
+      emoji: true
     });
+
+    console.log(value)
 
     $('.embed-not-ready h5').html(value);
   });
 
   $(".embed-field-value-editor").on("keyup", function() {
-    var value = toHTML($(this).val())
+    var value = toHTML($(this).val(),{
+      emoji: true
+    })
 
     $('.embed-not-ready p').html(value);
   });
@@ -515,5 +537,10 @@ $(document).ready(function(){
         description: 'Text output exceeded 2048 chars.'
       })
     };
+  });
+
+  $('[contenteditable]').on('paste', function(e){
+    e.preventDefault();
+    document.execCommand('insertText', false, e.originalEvent.clipboardData.getData('text/plain'));
   });
 });
