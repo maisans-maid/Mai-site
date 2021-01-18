@@ -133,7 +133,7 @@ function getEmbedObject(){
   embed.author = {
     name: $('.embed-author').text().trim() || null,
     url: $('.embed-author a').attr('href') || null,
-    icon_url: $('.embed-author img').attr('href') || null
+    icon_url: $('.embed-author img').attr('src') || null
   };
   embed.fields = [];
   $('.embed-field').each(function(){
