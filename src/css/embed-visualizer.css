@@ -537,7 +537,7 @@ input:checked + .slider:before {
 }
 
 .embed-field.inline {
-  max-width: 30%;
+  width: 30%;
   flex-grow: 1;
 }
 
