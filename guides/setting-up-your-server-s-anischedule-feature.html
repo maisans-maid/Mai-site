@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Description goes here">
+    <meta name="keywords" content="Discord Bot, Mai, Mai Sakurajima, Aobuta, Anime">
+    <meta name="author" content="Sakurajimai#6742">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/emojis/757869043117064223.png?v=1" />
+
+    <!--Stylesheets-->
+
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/guides.css">
+    <!--------------->
+    <title> Mai Guides | Setting up your server's Anischedule Feature </title>
+
+    <script src="../src/javascript/jquery/jquery-3.5.1.js"></script>
+    <script src="../src/javascript/main.js"></script>
+    <script src="../src/javascript/guides.js"></script>
+
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-bar-img">
+        <img src="./src/images/avatar.png" alt="">
+        <h1>Mai</h1>
+      </div>
+      <div class="nav-bar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-bar-links">
+        <ul>
+          <li><a href="https://mai-san.ml">HOME</a></li>
+          <li><a href="https://commands.mai-san.ml">COMMANDS</a></li>
+          <li><a href="https://market.mai-san.ml">MARKET</a></li>
+          <li><a href="https://invite.mai-san.ml">INVITE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-content">
+      <div class="page-wallpaper" style="background-image:url(https://i.pinimg.com/originals/cd/0f/80/cd0f80478f550d908c213c31d3e68ea3.jpg)"></div>
+      <h1>Setting up your server's Anischedule Feature</h1>
+      <div class="article-author">
+        <img src="https://avatars2.githubusercontent.com/u/56829176?s=460&u=dbf824065eda930c1407ed58cb51c3b755249bfd&v=4" alt="">
+        <div class="article-author-text">
+          <h5>
+            <a href="https://github.com/maisans-maid/">
+              Sakurajimai
+            </a>
+          </h5>
+          <p>December 24, 2020 • 5 min read</p>
+        </div>
+      </div>
+      <p>This is an implementation of <a href="https://github.com/Tehnut">TehNut</a>'s work Anischedule. If you liked his work, you may contribute to him by going to the Anischedule Project.</p>
+      <div class="topic">
+        <h2>A Special Mai Bot Feature that notifies you when a new anime episode has aired</h2>
+        <p>A feature that uses the AniList API to retrieve the airing schedule for configured anime and sends a message when a new episode has aired, like the image below.</p>
+        <img class="assets" src="../src/images/anisched-sample.png" alt="">
+        <p>Before you start everything, make sure Mai has the necessary Permissions <code>SEND_MESSAGES</code>, <code>EMBED_LINKS</code> so that announcements are sent on a set channel.</p>
+        <h3>1. Use the <code>setanischedch</code> command and pass in the desired announcement channel as the first parameter.</h3>
+        <img class="assets" src="../src/images/anischedule-setchannel.png" alt="" style="width: 441">
+        <h3>2. Search for currently airing anime you wanted to keep track of, grab the link, use the m!watch command and pass the copied URL as the parameter.</h3>
+        <p>Take note that the only accepted URLs are from MyAnimeList and AniList. Wait for a confirmation from the bot. If the anime is already listed on your server, the anime will not be added, but you will be notified instead that the URL you submitted is already listed. Finished or Cancelled anime series cannot be added, but you can add upcoming anime as long as it has an official entry on AniList.</p>
+        <img class="assets" src="../src/images/anischedule-add-anime.png" alt="" style="width: 594">
+      </div>
+      <div class="topic">
+        <h2>Adding More to the List</h2>
+        <p>You can add many ongoing anime as you want, without worries! Just use the <code>m!watch [anime URL]</code> command and it will automatically add the anime, no Problem! As mentioned before, you can also add multiple entries at once. Just add the links separated with space. You may also visit the <a href="https://invite.mai-san.ml/">support server</a> to get all the links of ongoing anime.</p>
+      </div>
+      <div class="topic">
+        <h2>Removing Anime From the List</h2>
+        <p>You might think that the anime you added is none of your business, or you don't want to hear updates from it anymore because of your own personal reason. Removing anime from your watch-list is easier than you think! Just use m!unwatch [anime URL] command and you're good to go. Providing URL from an unlisted anime will return with an error saying that anime is not listed.</p>
+        <img class="assets" src="../src/images/anischedule-remove-anime.png" alt="" style="width: 415">
+      </div>
+      <div class="topic">
+        <h2>Viewing the watchlist</h2>
+        <p>You added so much anime that you've lost count, and you forgot what those are. Now you start to wonder, how am I gonna view my server's listed anime? Viewing the watchlist is accessible by all members of the server via the command m!watching. This command will return with the list of currently watching anime for the server. Just make sure that <code>[EMBED_LINKS]</code> permission is enabled for the bot on the channel where the command is executed.</p>
+      </div>
+      <div class="topic">
+        <h2>F.A.Q.s</h2>
+        <h3>• I compared this feature to TehNut's. Where is the next command? </h3>
+        <p>Unfortunately, I did not include it as I don't see it serving any purpose. But i'm still considering it if anyone suggests. </p>
+        <h3>• Are there any plans to have it "User-specific" rather than "Server Specific". </h3>
+        <p>This feature is very hard to implement when Discord API is imposing rate-limits on it's send endpoint. Imagine multiple users are subscribed to that anime, the bot has to send the same number of messages to those users in a short amount of time. Unless Discord loosens its ratelimit rules, I don't see it being implemented in the near future.</p>
+      </div>
+      <span class="article-title-line"></span>
+      <div class="footer-author-note">
+        <img src="https://avatars2.githubusercontent.com/u/56829176?s=460&u=dbf824065eda930c1407ed58cb51c3b755249bfd&v=4" alt="">
+        <div class="footer-author-info">
+          <h4>WRITTEN BY</h4>
+          <h3><a href="https://github.com/maisans-maid">Sakurajimai#6742</a> <a href="https://github.com/maisans-maid"><span>maisans-maid</span></a></h3>
+          <p>Nobody beats Mai X Sakuta</p>
+        </div>
+      </div>
+      <span class="article-title-line"></span>
+    </div>
+    <div class="footer">
+      <div class="footer-information">
+        <h1>Mai</h1>
+        <p>
+          © Copyright Mai 2020-2021. All rights reserved <br>
+          This site is made by Sakurajimai#6742
+        </p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="https://mai-san.ml/guides">Back to Guides</a></li>
+          <li><a href="https://commands.mai-san.ml/">Commands</a></li>
+          <li><a href="https://market.mai-san.ml/">Market</a></li>
+          <li><a href="https://invite.mai-san.ml/" target="_blank">Invite</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
