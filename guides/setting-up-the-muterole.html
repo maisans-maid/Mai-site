@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Description goes here">
+    <meta name="keywords" content="Discord Bot, Mai, Mai Sakurajima, Aobuta, Anime">
+    <meta name="author" content="Sakurajimai#6742">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/emojis/757869043117064223.png?v=1" />
+
+    <!--Stylesheets-->
+
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/guides.css">
+    <!--------------->
+    <title> Mai Guides | Setting up the Mute Role </title>
+
+    <script src="../src/javascript/jquery/jquery-3.5.1.js"></script>
+    <script src="../src/javascript/main.js"></script>
+    <script src="../src/javascript/guides.js"></script>
+
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-bar-img">
+        <img src="./src/images/avatar.png" alt="">
+        <h1>Mai</h1>
+      </div>
+      <div class="nav-bar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="nav-bar-links">
+        <ul>
+          <li><a href="https://mai-san.ml">HOME</a></li>
+          <li><a href="https://commands.mai-san.ml">COMMANDS</a></li>
+          <li><a href="https://market.mai-san.ml">MARKET</a></li>
+          <li><a href="https://invite.mai-san.ml">INVITE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-content">
+      <div class="page-wallpaper" style="background-image:url(https://i.pinimg.com/originals/cd/0f/80/cd0f80478f550d908c213c31d3e68ea3.jpg)"></div>
+      <h1>Setting up the Mute Role</h1>
+      <div class="article-author">
+        <img src="https://avatars1.githubusercontent.com/u/65192718?s=460&u=a3cf741ce62e6561e64b518c32d9b681bf8642c3&v=4" alt="">
+        <div class="article-author-text">
+          <h5>
+            <a href="https://github.com/BearTS/">
+              Bear
+            </a>
+          </h5>
+          <p>January 20, 2021 • 5 min read</p>
+        </div>
+      </div>
+      <div class="topic">
+        <p>Before you can use the moderative command <code>Mute</code>, you have to set which role is going to be the Mute role. If you haven't tried anything of the sort yet, we'll walk you through it</p>
+        <h2>Decide a Mute Role</h2>
+        <p>Decide which role you are going to use when using mai's mute command. The Color RED gives it a dangerous feeling, and the name Muted gives it justice. However, you can just pick any name and color you want. It's all up to you.</p>
+        <h2>Set or Check the Role Permissions.</h2>
+        <p>Go to Server Settings -> Roles -> The Role you're planning to set as Mute Role -> Scroll Down to "Send Messages Permission" -> Disable.</p><br>
+        <img src="https://raw.githubusercontent.com/BearTS/mai-docs/main/docs/assets/muterole-setup.png" width="600"><br>
+        <br><p>Make sure the mute role is above all other member's role because other role permissions will override it. Just make sure all moderative permissions (ADMINISTRATOR, Kick Members, Ban Members, Manage Messages, etc.) are turned off. See to it also that this role is below Mai's highest role. For effeciency, place this role under Mai's highest role. </p><br>
+        <p>You can also disallow muted members from connecting to voice channel by disabling 'Connect' from the mute role's permission.<br></p>
+        <img class="assets" src="https://mystifying-rosalind-42d723.netlify.app/assets/images/disable-connect-a8e856c0c8c99588f4f9796888db0cfa.png" width="441"><br>
+        <p>If you are well versed in managing role permissions, you may set any disabling permissions to the muterole, and it will take effect.<br>
+        If you haven't created a role for this yet, create one and just follow the preceeding procedures.</p>
+        <h2>Have Mai Recognize the Muterole.</h2>
+        <p>You can now have Mai recognize this muterole by using the command <code>m!setmute <Role></code>. Mai will be using this role to add to users whenever the <code>mute</code> command is called.</p><br>
+          <img src="https://raw.githubusercontent.com/BearTS/mai-docs/main/docs/assets/setmute.png"><br>
+        <p>You can also check which role the muterole is currently set to by using the same command without parameters<br>You can now use the moderative command m!mute in your server! </p>
+        <img src="https://raw.githubusercontent.com/BearTS/mai-docs/main/docs/assets/muterole-1.png">
+      </div>
+      <span class="article-title-line"></span>
+      <div class="footer-author-note">
+        <img src="https://avatars1.githubusercontent.com/u/65192718?s=460&u=a3cf741ce62e6561e64b518c32d9b681bf8642c3&v=4" alt="">
+        <div class="footer-author-info">
+          <h4>WRITTEN BY</h4>
+          <h3><a href="https://github.com/BearTS">Bear#3437</a> <a href="https://github.com/BearTS"><span>BearTS</span></a></h3>
+          <p>I don't Bite</p>
+        </div>
+      </div>
+      <span class="article-title-line"></span>
+    </div>
+    <div class="footer">
+      <div class="footer-information">
+        <h1>Mai</h1>
+        <p>
+          © Copyright Mai 2020-2021. All rights reserved <br>
+          This site is made by Sakurajimai#6742
+        </p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="https://mai-san.ml/guides">Back to Guides</a></li>
+          <li><a href="https://commands.mai-san.ml/">Commands</a></li>
+          <li><a href="https://market.mai-san.ml/">Market</a></li>
+          <li><a href="https://invite.mai-san.ml/" target="_blank">Invite</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
