@@ -2,6 +2,25 @@ html {
   min-width: 300px;
 }
 
+pre {
+  padding: 10px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #161b22;
+  font-family: monospace;
+}
+
+pre .comment{
+  color: dimgray;
+}
+
+.inline{
+  padding: 3px;
+  border-radius: 5px;
+  background-color: rgb(58,72,86);
+}
+
 .top-header-container {
   position: relative;
   display: block;

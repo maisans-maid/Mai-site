@@ -42,7 +42,7 @@
       </div>
     </nav>
     <div class="page-content">
-      <div class="page-wallpaper" style="background-image:url(https://i.pinimg.com/originals/cd/0f/80/cd0f80478f550d908c213c31d3e68ea3.jpg)"></div>
+      <div class="page-wallpaper" style="background-image:url(../src/images/avatar-wallpaper-long.jpg)"></div>
       <h1>Running your own Mai bot</h1>
       <div class="article-author">
         <img src="https://avatars1.githubusercontent.com/u/65192718?s=460&u=a3cf741ce62e6561e64b518c32d9b681bf8642c3&v=4" alt="">
@@ -52,42 +52,37 @@
               Bear
             </a>
           </h5>
-          <p>December 24, 2020 • 2 min read</p>
+          <p>January 20, 2021 • 2 min read</p>
         </div>
       </div>
+      <p> To use discord.js (Mai Bot uses Discord.js to interact with the Discord API), you'll need to install Node.js. If you do have Node installed, but have an older version (i.e. anything below 14.0), you should upgrade to the latest version. Mai requires Node 14.0 or higher.</p>
       <div class="topic">
         <h2>Get the project Locally</h2>
         <p>Run the following commands to get the project locally</p>
         <pre>
-        <code>
-git clone https://github.com/maisans-maid/Mai.git # or clone your own fork
+<code>git clone https://github.com/maisans-maid/Mai.git # or clone your own fork
 cd Mai
 npm install
-npm build
-        </code>
-        </pre>
+npm build </code> </pre>
         <h2>Create a new .env file in the root directory of the project with the following properties</h2>
-        <pre>
-        <code>
-DISCORD_TOKEN=
+        <pre class="env">
+<code>DISCORD_TOKEN=
 MONGO_URI=
 
-# Chatbot id and key, if you want to use the chatbot feature
-# contact Sakurajimai#6742 for more info
-# [OPTIONAL]
+<span class="comment"># Chatbot id and key, if you want to use the chatbot feature</span>
+<span class="comment"># contact Sakurajimai#6742 for more info</span>
+<span class="comment"># [OPTIONAL]</span>
 
 chatbot_id=
-chatbot_key=
-        </code>
-        </pre>
+chatbot_key=</code> </pre>
         This is also present on .env_example file on the root directory of the project<br><br>
-        <b><code>DISCORD_TOKEN</code></b> should be the bot token obtained from Discord's developer panel.<br>
-        <b><code>MONGO_URI</code></b> should be your mongo DB URI, if you want to use the MONGO Database. You can use the bot without this too (not recommended, at some point it might crash the bot), but you won't be able to use commands that rely on Mongo DB.<br>
-        <b><code>chatbot_id</code></b> and <b><code>chatbot_key</code></b> are completetly optional and it is required only if you want to enable chat bot system of mai
+        <b><code class="inline">DISCORD_TOKEN</code></b> should be the bot token obtained from Discord's developer panel.<br>
+        <b><code class="inline">MONGO_URI</code></b> should be your mongo DB URI, if you want to use the MONGO Database. You can use the bot without this too (not recommended, at some point it might crash the bot), but you won't be able to use commands that rely on Mongo DB.<br>
+        <b><code class="inline">chatbot_id</code></b> and <b><code class="inline">chatbot_key</code></b> are completetly optional and it is required only if you want to enable chat bot system of mai
       </div>
       <div class="topic">
         <h2>Start The Bot</h2>
-        <p>You can start the bot by typing in <b><code>npm start</code></b> in the commandline.</p>
+        <p>You can start the bot by typing in <b><code class="inline">npm start</code></b> in the commandline.</p>
         </div>
       <span class="article-title-line"></span>
       <div class="footer-author-note">
