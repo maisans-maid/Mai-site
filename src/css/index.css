@@ -98,7 +98,6 @@ body {
   width: 100%;
   height: 100px;
   background-image: url('../images/wave.png');
-  background-size: cover;
 }
 
 .feature-row {
@@ -106,6 +105,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   background-color: dimgray;
+}
+
+.last-row{
+  padding-bottom: 150px;
 }
 
 .feature-column{
@@ -139,6 +142,49 @@ body {
   transform: scale(1.05);
 }
 
+.featured-video {
+  padding-top: 50px;
+  margin: auto;
+}
+
+.featured-video h1{
+  text-align: center;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.featured-video video{
+  max-width: 800px;
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.featured-video video:focus{
+  outline: none;
+}
+
+.gallery-btn{
+  display: block;
+  width: 150px;
+  padding: 5px;
+  text-align: center;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 10px;
+  background-color: #272928;
+  font-size: 20px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.gallery-btn:hover{
+  color: white;
+  background-color: hotpink;
+}
 
 .main-links {
   display: flex;
@@ -146,6 +192,8 @@ body {
   flex-grow: 1;
   justify-content: center;
   padding-top: 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .link-container {
