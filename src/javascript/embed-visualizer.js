@@ -91,9 +91,7 @@ function toHTML(text, options = {}){
   };
 
   if (options.emoji === true){
-    console.log(text)
     text = text.replace(/(<|&lt;)?(a)?:?(\w{2,32}):(\d{17,19})(>|&gt;)?/g,'<img class="embed-description-emojis" name="$3" animated="$2" src="https://cdn.discordapp.com/emojis/$4" width="15px" height="15px"></img>');
-    console.log(text)
   };
 
   return text;
@@ -378,8 +376,7 @@ $(document).ready(function(){
     var value = toHTML($(this).val(), {
       stripLinks: true,
       code: false,
-      inlineCode: false,
-      emoji: true
+      inlineCode: false
     });
 
     $('.embed-not-ready h5').html(value);
