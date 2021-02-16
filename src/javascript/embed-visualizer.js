@@ -376,7 +376,8 @@ $(document).ready(function(){
     var value = toHTML($(this).val(), {
       stripLinks: true,
       code: false,
-      inlineCode: false
+      inlineCode: false,
+      emoji: true
     });
 
     $('.embed-not-ready h5').html(value);
@@ -516,13 +517,13 @@ $(document).ready(function(){
     addToText(`-description:[${embed.description || ' '}]`);
     addToText(`-url:[${embed.url || ' '}]`);
     addToText(`-color:[#${embed.color ? embed.color.toString(16) : '000000'}]`);
-    addToText(`-footer=image:[${embed.footer.icon_url || 'https://mai-san.ml/'}]`);
+    addToText(`-footer=image:[${embed.footer.icon_url || ' '}]`);
     addToText(`-footer=text:[${embed.footer.text || ' '}]`);
-    addToText(`-thumbnail:[${embed.thumbnail.url || 'https://mai-san.ml/'}]`);
-    addToText(`-image:[${embed.image.url || 'https://mai-san.ml/'}]`);
+    addToText(`-thumbnail:[${embed.thumbnail.url || ' '}]`);
+    addToText(`-image:[${embed.image.url || ' '}]`);
     addToText(`-author=name:[${embed.author.name || ' '}]`);
-    addToText(`-author=url:[${embed.author.url || 'https://mai-san.ml/'}]`);
-    addToText(`-author=image:[${embed.author.icon_url || 'https://mai-san.ml/'}]`);
+    addToText(`-author=url:[${embed.author.url || ' '}]`);
+    addToText(`-author=image:[${embed.author.icon_url || ' '}]`);
 
     if (text.length === 1){
       copyToClipboard(text[0]);
