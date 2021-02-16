@@ -506,6 +506,7 @@ input:checked + .slider:before {
 .embed-title {
   word-break: break-word;
   font-size: 13px;
+  font-weight: bolder;
 }
 
 .embed-title a{
